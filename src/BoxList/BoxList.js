@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { v4 as uuid } from 'uuid';
 
-import Box from "./Box";
-import NewBoxForm from "./NewBoxForm";
+import Box from "../Box/Box";
+import NewBoxForm from "../NewBoxForm/NewBoxForm";
 
 import "./BoxList.css";
 
@@ -21,12 +21,13 @@ function BoxList() {
     return (
         <div>
             <NewBoxForm addBox={addBox} />
-            <div className="BoxList">
+            <div className="BoxList" key={uuid()}>
                 {boxes.map(box => <Box 
                                     color={box.color} 
                                     width={box.width} 
                                     height={box.height} 
                                     id={box.id}
+                                    key={uuid()}
                                     removeBox={removeBox}
                                 />)}
             </div>

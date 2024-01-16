@@ -1,4 +1,4 @@
-import BoxList from './BoxList';
+import BoxList from '../BoxList/BoxList.js';
 import React from 'react';
 import './App.css';
 

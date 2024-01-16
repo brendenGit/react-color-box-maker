@@ -15,7 +15,6 @@ function Box({ color, width, height, id, removeBox }) {
 
     return (
         <div
-            key={id}
             id={id}
             style={styles}
             onClick={handleClick}
