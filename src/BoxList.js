@@ -13,7 +13,7 @@ function BoxList() {
         const newBox = { color, width, height, id: uuid() }
         setBoxList(oldBoxes => ([...oldBoxes, newBox]));
     };
-
+ 
     const removeBox = (id) => {
         setBoxList(oldBoxes => (oldBoxes.filter(box => box.id !== id)));
     };
